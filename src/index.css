@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @page {
+    size: A4;
+    margin: 1in;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@media screen {
+  body {
+    background-color: #eee;
+  }
+
+  .pagedjs_page {
+    background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+    margin: 1rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .pagedjs_pages {
+    width: calc(var(--pagedjs-width) * 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-origin: 0 0;
+    transform: scale(0.5);
+  }
+}
